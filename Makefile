@@ -12,7 +12,7 @@ default:
 clean:
 	$(MAKE) -C $(KDIR) M=$$PWD clean
 
-%.s %.i: %.clean										# just use make hello_lab6.s instead of objdump
+%.s %.i: %.c								# just use make hello_lab6.s instead of objdump
 	$(MAKE) -C $(KDIR) M=$$PWD $@
 
 endif
